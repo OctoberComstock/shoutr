@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, only: [:create]
 
+  resources :shouts, only: [:create]
+
   resources :users, only: [:create] do
     resource :password,
       controller: "clearance/passwords",
